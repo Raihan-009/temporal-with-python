@@ -160,10 +160,10 @@ tctl --address localhost:7233 namespace list
 Even though the `default` namespace exists, you can create additional namespaces. Use the `namespace register` command:
 
 ```bash
-tctl namespace register   --namespace my-namespace   --retention 168h
+tctl --ns matrix namespace register --retention 24h
 ```
 
-- `--namespace my-namespace` → The name of your new namespace.
+- `--ns matrix` → The name of your new namespace.
 - `--retention 168h`      → Keep workflow history for 168 hours (7 days).
 
 You should see output similar to:
@@ -178,7 +178,7 @@ To confirm:
 tctl namespace list
 ```
 
-You’ll see both `default` and `my-namespace`, along with their retention settings.
+You’ll see both `default` and `matrix`, along with their retention settings.
 
 ---
 
